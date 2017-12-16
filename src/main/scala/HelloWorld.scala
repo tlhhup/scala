@@ -31,7 +31,7 @@ object HelloWorld {
         print(i)
         if(i>70){
           println("跳出循环")
-          loop.break()
+          loop.break()//跳出当前的loop语句块
         }
       }
     }
@@ -42,7 +42,23 @@ object HelloWorld {
       print(x)
     }
 
-  }
+    a = 0;
+    var b = 0;
+    // for 循环
+    for( a <- 1 to 3; b <- 1 to 4){ //多个区间，执行次数由大的决定,多个区间采用";"隔开
+      println( "Value of a: " + a );
+      println( "Value of b: " + b );
+    }
 
+    //循环过滤
+    a = 0;
+    val numList = List(1,2,3,4,5,6,7,8,9,10);
+
+    // for 循环
+    for( a <- numList if a != 3; if a < 8 ){
+      println( "Value of a: " + a );
+    }
+
+  }
 
 }
